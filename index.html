@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高尾お参りケアサービス | 大切な人も、愛するペットも。心を込めたお参り代行</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #FFF0F5; /* ご指定の背景色 */
+            --text-main: #4e454a; /* ご指定の文字色 */
+            --accent-rose: #881337;
+            --line-green: #06C755;
+            --overlay-dark: rgba(30, 25, 20, 0.6);
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            scroll-behavior: smooth;
+            color: var(--text-main);
+            background-color: var(--bg-base);
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif JP', serif;
+            color: #2d262a;
+        }
+        
+        /* 和の質感を出すためのテクスチャ */
+        .washi-texture::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+            opacity: 0.12;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        /* セクション1: 落ち着いたお寺の背景 */
+        .hero-bg {
+            position: relative;
+            background-image: 
+                linear-gradient(var(--overlay-dark), var(--overlay-dark)), 
+                url('https://images.unsplash.com/photo-1545567191-721206655116?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        @media (max-width: 768px) {
+            .hero-bg { background-attachment: scroll; }
+        }
+
+        .hero-title {
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            letter-spacing: 0.15em;
+            line-height: 1.6;
+        }
+
+        .hero-divider {
+            width: 80px;
+            height: 1px;
+            background: rgba(255,255,255,0.4);
+            margin: 2.5rem auto;
+            position: relative;
+        }
+        .hero-divider::after {
+            content: "◆";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(8px);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(78, 69, 74, 0.08);
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+        }
+
+        /* LINEボタンのアニメーション */
+        .line-button {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .line-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(6, 199, 85, 0.2);
+        }
+    </style>
+</head>
+<body class="washi-texture">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-rose-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="flex flex-col">
+                        <span class="text-xl md:text-2xl font-bold text-rose-900 serif tracking-tighter">高尾お参りケアサービス</span>
+                        <span class="text-[8px] tracking-[0.3em] opacity-60">TAKAO OMAIRI CARE SERVICE</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-10 text-sm">
+                        <a href="#about" class="hover:text-rose-800 font-medium transition duration-300">サービス概要</a>
+                        <a href="#philosophy" class="hover:text-rose-800 font-medium transition duration-300">私たちの想い</a>
+                        <a href="#services" class="hover:text-rose-800 font-medium transition duration-300">料金・プラン</a>
+                        <a href="https://line.me" target="_blank" class="bg-[#06C755] text-white px-6 py-2 rounded-full line-button shadow-sm flex items-center font-bold">
+                            LINEで相談
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center hero-bg overflow-hidden">
+        <div class="text-center text-white px-4 z-10">
+            <p class="text-sm md:text-lg mb-6 tracking-[0.5em] font-light opacity-90 serif">八王子・高尾から、真心を込めて</p>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 hero-title serif">
+                『想い』を大切に、<br>清らかに整える。
+            </h1>
+            <div class="hero-divider"></div>
+            <p class="text-base md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed opacity-90">
+                大切な人も、愛するペットも。<br>
+                清掃からお参りまで、一件一件に想いを込めてケアします。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
+                <a href="#services" class="px-12 py-4 bg-white text-rose-950 rounded-sm font-bold tracking-widest hover:bg-rose-50 transition shadow-xl border border-white/20">料金プランを見る</a>
+                <a href="https://line.me" target="_blank" class="px-12 py-4 bg-[#06C755] text-white rounded-sm font-bold tracking-widest line-button shadow-xl flex items-center">
+                    LINEで今すぐ依頼
+                </a>
+            </div>
+        </div>
+        <!-- 裾野のグラデーション -->
+        <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#FFF0F5] to-transparent"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about" class="py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-rose-950 serif">お参りケアサービスとは？</h2>
+                <div class="w-12 h-0.5 bg-rose-800 mx-auto opacity-30"></div>
+                <p class="mt-6 text-sm opacity-70 tracking-widest uppercase">Our Characteristics</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 01 -->
+                <div class="p-10 rounded-sm feature-card border border-rose-200/20">
+                    <div class="text-rose-900/30 text-xs font-bold mb-6 tracking-widest">01</div>
+                    <h3 class="text-xl font-bold mb-6 serif">清潔感</h3>
+                    <p class="text-xs leading-8 opacity-90">清潔感を最も大切にしています。墓石の拭き上げから落ち葉の除去まで、細かい部分まで丁寧に整えます。</p>
+                </div>
+                <!-- Feature 02 -->
+                <div class="p-10 rounded-sm feature-card border border-rose-200/20">
+                    <div class="text-rose-900/30 text-xs font-bold mb-6 tracking-widest">02</div>
+                    <h3 class="text-xl font-bold mb-6 serif">心</h3>
+                    <p class="text-xs leading-8 opacity-90">合掌やご挨拶も丁寧に行います。人もペットも家族として、一件一件に想いを込めて対応します。</p>
+                </div>
+                <!-- Feature 03 -->
+                <div class="p-10 rounded-sm feature-card border border-rose-200/20">
+                    <div class="text-rose-900/30 text-xs font-bold mb-6 tracking-widest">03</div>
+                    <h3 class="text-xl font-bold mb-6 serif">信頼</h3>
+                    <p class="text-xs leading-8 opacity-90">写真や動画でわかりやすく報告。作業前後の様子を一目で確認でき、「任せたのに不安」という想いを解消します。</p>
+                </div>
+                <!-- Feature 04 -->
+                <div class="p-10 rounded-sm feature-card border border-rose-200/20">
+                    <div class="text-rose-900/30 text-xs font-bold mb-6 tracking-widest">04</div>
+                    <h3 class="text-xl font-bold mb-6 serif">安心感</h3>
+                    <p class="text-xs leading-8 opacity-90">八王子・高尾で育った地域密着のスタッフ。土地のこと、霊苑のことを熟知しているからこそできるケアがあります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-32 bg-white/50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="order-2 md:order-1 relative">
+                    <div class="absolute -top-6 -left-6 w-full h-full border border-rose-900/10"></div>
+                    <div class="rounded-sm overflow-hidden shadow-2xl relative z-10">
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&q=80&w=1000" alt="" class="w-full h-auto">
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl font-bold mb-10 text-rose-950 serif tracking-wide">私たちの想い</h2>
+                    <p class="text-lg leading-loose mb-8 font-medium italic border-l-4 border-rose-800 pl-6">
+                        「いつ見てもきれい」な状態を保つことで、<br>ご家族の安心と誇りを守ります。
+                    </p>
+                    <p class="leading-loose opacity-90 text-sm mb-6">
+                        お墓参りは、単なる「作業」ではありません。それは、大切な存在へ向ける「気持ち」を届けるための時間です。
+                    </p>
+                    <p class="leading-loose opacity-90 text-sm">
+                        忙しいとき、遠くにいるとき。その大切な気持ちを私たちに託してください。地元高尾ならではの誠実な手仕事で、あなたの代わりに真心を届けます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-rose-950 serif">料金プラン</h2>
+            <p class="text-sm opacity-60 mb-16 tracking-widest">選べる3つのプラン</p>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Plan 1 -->
+                <div class="bg-white/80 p-10 rounded-sm shadow-sm border border-rose-200/30 flex flex-col">
+                    <h3 class="text-lg font-bold mb-2 text-stone-600">スポットプラン</h3>
+                    <p class="text-[10px] mb-8 tracking-widest text-stone-400">1回限りのご依頼</p>
+                    <div class="text-4xl font-bold mb-10 serif text-rose-950">¥18,000 <span class="text-sm font-normal opacity-40">税込</span></div>
+                    <p class="text-xs mb-8 opacity-70 leading-loose text-left">忙しい時や、どうしても行けない時に。清掃とお参りを心を込めて実施します。</p>
+                    <ul class="text-left space-y-4 mb-12 text-xs flex-grow">
+                        <li class="flex items-center"><span class="w-1 h-1 bg-rose-800 rounded-full mr-3"></span> 墓石・水鉢・線香皿の清掃</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-rose-800 rounded-full mr-3"></span> 線香・生花の交換</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-rose-800 rounded-full mr-3"></span> 真心を込めた合掌礼拝</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-rose-800 rounded-full mr-3"></span> 写真・動画報告（LINE）</li>
+                    </ul>
+                    <a href="https://line.me" target="_blank" class="block w-full py-4 bg-[#06C755] text-white font-bold line-button tracking-widest">LINEで依頼</a>
+                </div>
+
+                <!-- Plan 2 (Highlighted) -->
+                <div class="bg-rose-950 p-10 rounded-sm shadow-2xl transform md:-translate-y-6 text-white relative flex flex-col">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-200 text-rose-950 text-[10px] font-bold px-8 py-1 tracking-[0.3em]">一番人気</div>
+                    <h3 class="text-lg font-bold mb-2">定期プラン</h3>
+                    <p class="text-[10px] mb-8 tracking-widest opacity-60">月1回の定期メンテナンス</p>
+                    <div class="text-4xl font-bold mb-4 serif">¥17,000 <span class="text-sm font-normal opacity-60">税込</span></div>
+                    <p class="text-xs text-amber-200/80 mb-10 tracking-wider font-bold italic">「しっかり丁寧にお願いしたい」方へ</p>
+                    <ul class="text-left space-y-4 mb-12 text-xs flex-grow">
+                        <li class="flex items-center"><span class="w-1 h-1 bg-amber-200 rounded-full mr-3"></span> 墓石・備品の徹底清掃</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-amber-200 rounded-full mr-3"></span> 毎月の供え替え（線香・花）</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-amber-200 rounded-full mr-3"></span> 季節ごとの丁寧なお参り</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-amber-200 rounded-full mr-3"></span> 毎月の写真・動画報告</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-amber-200 rounded-full mr-3"></span> 常にお墓を美しく維持</li>
+                    </ul>
+                    <a href="https://line.me" target="_blank" class="block w-full py-4 bg-white text-rose-950 font-bold hover:bg-stone-100 transition tracking-widest">LINEで依頼</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-white/80 p-10 rounded-sm shadow-sm border border-rose-200/30 flex flex-col">
+                    <h3 class="text-lg font-bold mb-2 text-stone-600">年間VIPプラン</h3>
+                    <p class="text-[10px] mb-8 tracking-widest text-stone-400">年間を通したフルサポート</p>
+                    <div class="text-4xl font-bold mb-10 serif text-rose-950">¥65,000 <span class="text-sm font-normal opacity-40">税込</span></div>
+                    <p class="text-xs mb-8 opacity-70 leading-loose text-left">「特別な日」をすべて大切にしたい方へ。お盆や命日など、重要な日を逃さずケアします。</p>
+                    <ul class="text-left space-y-4 mb-12 text-xs flex-grow">
+                        <li class="flex items-center"><span class="w-1 h-1 bg-rose-800 rounded-full mr-3"></span> お盆・お彼岸・命日の重点ケア</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-rose-800 rounded-full mr-3"></span> 年間を通した美観維持</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-rose-800 rounded-full mr-3"></span> 優先予約・特別枠の確保</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-rose-800 rounded-full mr-3"></span> 墓所周りの異常点検</li>
+                    </ul>
+                    <a href="https://line.me" target="_blank" class="block w-full py-4 bg-[#06C755] text-white font-bold line-button tracking-widest">LINEで依頼</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Flow -->
+    <section class="py-32 bg-stone-100/30 border-y border-rose-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-20 serif tracking-widest text-rose-950">ご依頼方法</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-white border border-rose-200 rounded-full flex items-center justify-center mx-auto mb-6 text-xl serif text-rose-900 shadow-sm font-bold">1</div>
+                    <p class="font-bold mb-4 tracking-widest text-sm">LINEで依頼</p>
+                    <p class="text-[11px] opacity-80 leading-relaxed px-4">「○日にお願いします」とメッセージを送るだけ。</p>
+                </div>
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-white border border-rose-200 rounded-full flex items-center justify-center mx-auto mb-6 text-xl serif text-rose-900 shadow-sm font-bold">2</div>
+                    <p class="font-bold mb-4 tracking-widest text-sm">面倒な手続き不要</p>
+                    <p class="text-[11px] opacity-80 leading-relaxed px-4">長いやり取りや書面は必要ありません。</p>
+                </div>
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-white border border-rose-200 rounded-full flex items-center justify-center mx-auto mb-6 text-xl serif text-rose-900 shadow-sm font-bold">3</div>
+                    <p class="font-bold mb-4 tracking-widest text-sm">報告を待つ</p>
+                    <p class="text-[11px] opacity-80 leading-relaxed px-4">実施報告を写真・動画で受け取って完了。</p>
+                </div>
+                <!-- 装飾ライン -->
+                <div class="hidden md:block absolute top-8 left-1/4 w-1/2 h-px bg-rose-200 z-0"></div>
+            </div>
+            <p class="mt-20 text-xs opacity-60 italic tracking-widest">忙しい方でも、遠方でも、気軽に安心して頼めます。</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2d262a] text-stone-400 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-white/5 pb-16">
+                <div class="mb-10 md:mb-0">
+                    <span class="text-2xl font-bold text-white serif tracking-widest">高尾お参りケアサービス</span>
+                    <p class="text-[10px] mt-4 tracking-[0.5em] opacity-40 uppercase">Takao Omairi Care Service</p>
+                </div>
+                <div class="grid grid-cols-2 gap-x-16 gap-y-4 text-xs tracking-widest">
+                    <a href="#about" class="hover:text-white transition duration-300">特徴</a>
+                    <a href="#services" class="hover:text-white transition duration-300">料金プラン</a>
+                    <a href="#philosophy" class="hover:text-white transition duration-300">私たちの想い</a>
+                    <a href="https://line.me" target="_blank" class="text-white font-bold flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.121.303.079.778.039 1.085l-.171 1.047c-.052.312-.252 1.22.108 1.666.36.446 1.014.308 1.419.085 1.419-.085 7.641-4.502 10.413-7.708 2.046-2.427 3.008-4.606 3.008-6.415z"/></svg>
+                        LINE相談
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] opacity-30 tracking-[0.2em]">
+                <p>&copy; 2024 Takao Omairi Care Service. 東京都八王子市高尾エリア</p>
+                <div class="flex space-x-8">
+                    <a href="#" class="hover:text-white">プライバシーポリシー</a>
+                    <a href="#" class="hover:text-white">運営会社</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
